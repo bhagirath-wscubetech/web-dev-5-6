@@ -1,0 +1,15 @@
+.heading{
+	color:blue;
+	text-align: center;
+	/*
+		left
+		right
+		center
+		justify
+	*/
+}
+/*named element selector*/
+/*select all the paragraphs*/
+p{
+	text-align: justify;
+}

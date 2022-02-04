@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var marks = [40,43,45,30];
+		
+		console.log(marks);
+		for(num of marks)
+			console.log(num);
+		var total = 0;
+		for(number of marks){
+			total+=number;
+			//total = total + number
+		}
+		console.log("Grand Total",total);
+		var percent = (total/250) * 100;
+		percent = percent.toFixed(2);
+		console.log("Percentage",percent);
+		console.log("Max",Math.max(...marks))
+		console.log("Min",Math.min(...marks))		
+		if(percent >= 80){
+			console.log("Grade: A");
+		}else if(percent >= 60 && percent < 80){
+			console.log("Grade: B");			
+		}else if(percent >= 40 && percent < 60){
+			console.log("Grade: C");					
+		}else{
+			console.log("Fail");			
+		// }
+	</script>
+</body>
+</html>

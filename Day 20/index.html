@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		.main{
+			width: 1000px;
+			height: 500px;
+			margin: auto;
+			border: 1px black solid;
+			position: relative;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background: red;
+			position: absolute;
+			font-size: 50px;
+			color: white;
+			text-align: center;
+			transition-duration: 2s;
+
+			/**
+			 * transition-duration:  2s;
+			 * transition-delay:  3s;
+			 * transition:2s 3s;
+ 			 * */
+		}
+		.box:nth-child(1){
+			top: 0;
+			left: 0;
+		}
+		.box:nth-child(2){
+			right: 0;
+			top: 0;
+		}
+		.box:nth-child(3){
+			right: 0;
+			bottom: 0;
+		}
+		.box:nth-child(4){
+			left: 0;
+			bottom: 0;
+		}
+		.main:hover .box:nth-child(1){
+			top: 0;
+			left: 800px;
+		}
+		.main:hover .box:nth-child(2){
+			right: 0px;
+			top: 300px;
+		}
+		.main:hover .box:nth-child(3){
+			right: 800px;
+			bottom:0px;
+		}
+		.main:hover .box:nth-child(4){
+			right:00px;
+			bottom:300px;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div class="main">
+		<div class="box">1</div>
+		<div class="box">2</div>
+		<div class="box">3</div>
+		<div class="box">4</div>
+	</div>
+</body>
+</html>

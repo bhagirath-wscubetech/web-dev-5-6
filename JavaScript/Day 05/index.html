@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		for(var j=2;j<=100;j++){
+			
+			var isPrime = true;
+			var num = j;
+			for(var i=2;i<num;i++){
+				if(num%i == 0){
+					isPrime = false;
+					break;
+				}
+			}
+
+			if(isPrime == true){
+				document.write(`${num} <br/>`);
+			}			
+		}
+
+
+
+
+
+		// for(var i=1;i<=10;i++){
+		// 	if(i%2 != 0){
+		// 		continue;
+		// 	}
+		// 	document.write(`${i} <br/>`)
+		// }
+		// document.write(`Loop end`)
+		// for(var i = 1;i<=5;i++){
+		// 	for(var j=1;j<=i;j++){
+		// 		document.write(j);	
+		// 	}
+		// 	document.write("<br/>")
+		// }
+		// for(var i = 5;i>=1;i--){
+		// 	for(var j=5;j>=i;j--){
+		// 		document.write(j);	
+		// 	}
+		// 	document.write("<br/>")
+		// }
+		// for(var i=1;i<=8;i++){
+		// 	for(var j=1;j<=i;j++){
+		// 		document.write(i);
+		// 	}
+		// 	document.write("<br/>")
+		// }
+	</script>
+</body>
+</html>

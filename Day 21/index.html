@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+			font-family: verdana;
+		}
+
+		a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.main {
+			width: 1200px;
+			/*height: 60px;*/
+			margin: auto;
+			box-shadow: 0px 0px 0px 0px red;
+			/*h-off v-off blur spread color*/
+		}
+
+		#navbar {
+			width: 100%;
+			color: white;
+			list-style: none;
+			background: rgba(52, 73, 94, 1.0);
+		}
+
+		#navbar > li {
+			position: relative;
+			display: inline-block;
+			padding: 15px 30px;
+			transition: 0.5s;
+			margin-left: -5px;
+		}
+		#navbar > li:hover .child{
+			top: 100%;
+			opacity: 1;
+			visibility: visible;
+		}
+		.child{
+			min-width: 100%;
+			transition: 1s;
+			top: 200%;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+			background: rgba(52, 73, 94, 1.0);
+			position:absolute;
+		}
+		.child > li{
+			list-style: none;
+			padding: 5px 10px;
+			border-bottom: 1px white solid;
+		}
+	</style>
+</head>
+<body>
+	<div class="main" style="position:sticky;top:0;">
+		<ul id="navbar">
+			<li>
+				<a href="">Home</a>
+			</li>
+			<li>
+				<a href="">About</a>
+			</li>
+			<!-- relative -->
+			<li>
+				<a href="">Course</a>
+				<!-- obsolute -->
+				<ul class="child">
+					<li>
+						<a href="">Web Development</a>
+					</li>
+					<li>
+						<a href="">App Development</a>
+					</li>
+					<li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Gallery</a>
+				</li>
+				<li>
+					<a href="">Contact Us</a>
+					<ul class="child">
+						<li>
+							<a href="">Whatsapp</a>
+						</li>
+						<li>
+							<a href="">Email</a>
+						</li>
+
+					</ul>
+				</li>
+				<li>
+					<a href="">Login</a>
+				</li>
+				<li>
+					<a href="">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+	</html>

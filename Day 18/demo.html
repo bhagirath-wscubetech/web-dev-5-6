@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.main{
+			width: 400px;
+			height: 500px;
+			margin: 100px auto;
+			position: relative;
+			border:1px red solid;
+			overflow: hidden;
+		}	
+		.overlay{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transition: 0.5s;
+			left: 100%;
+			top: 100%;
+			background: rgba(0,0,0,0.8);
+			color: white;
+		}
+		.main:hover .overlay{
+			left: 0;
+			top: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<img src="https://picsum.photos/400/500"/>
+		<div class="overlay">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

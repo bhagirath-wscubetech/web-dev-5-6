@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.parent{
+			width: 1000px;
+			height: 50px;
+			border-radius: 20px;
+			background: white;
+			margin: 10px auto;
+			box-shadow: 0px 0px 5px grey inset;
+			overflow: hidden;
+		}
+		.child{
+			width: 0;
+			background: #3498db;
+			height: 50px;
+			animation: bar 3s;
+			border-radius: 0px 20px 20px 0px;			
+			animation-fill-mode: forwards;
+		}
+		@keyframes bar{
+			from{
+				width: 0;
+			}
+			to{
+				width: 100%;
+			}
+		}
+		.box{
+			width: 500px;
+			height: 300px;
+			margin: 100px auto;
+			box-shadow: 0px 0px 5px grey;
+			overflow: hidden;
+		}
+		img{
+			transition: 1s;
+		}
+		.box:hover img{
+			transform: scale(1.2,1.2);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="parent">
+		<div class="child" style="animation-timing-function: ease-out;"></div>
+	</div>
+	<div class="parent">
+		<div class="child" style="animation-timing-function: ease-in;"></div>
+	</div>
+	<div class="parent">
+		<div class="child" style="animation-timing-function: linear;"></div>
+	</div>
+
+	<div class="box">
+		<img src="https://picsum.photos/500/300"/>
+	</div>
+</body>
+</html>

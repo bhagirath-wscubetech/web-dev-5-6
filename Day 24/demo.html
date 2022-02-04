@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.box{
+			width:1000px;
+			height: 500px;
+			border: 2px black solid;
+			margin: 100px auto;
+			position: relative;
+		}
+		.child{
+			border: 1px red solid;
+			width: 200px;
+			height: 200px;
+			box-sizing: border-box;
+			position: absolute;
+			text-align: center;
+			font-size: 60px;
+			font-weight: bold;
+			animation-iteration-count: infinite !important;
+			animation-direction:alternate-reverse !important;
+		}
+		.child:nth-child(1){
+			top: 0;
+			left: 0;
+			animation: box1 5s;
+		}
+		.child:nth-child(2){
+			top: 0;
+			left: 800px;
+			animation: box2 5s;
+		}
+		.child:nth-child(3){
+			top: 300px;
+			left: 800px;
+			animation: box3 5s;
+		}
+		.child:nth-child(4){
+			top: 300px;
+			left: 0px;
+			animation: box4 5s;
+		}
+		@keyframes box1{
+			0%,100%{
+				top: 0;
+				left: 0;
+			}
+			40%{
+				top: 0;
+				left: 800px;
+			}
+			50%{
+				top: 300px;
+				left: 800px;
+			}
+			70%{
+				top: 300px;
+				left: 0px;
+			}
+		}
+		@keyframes box2{
+			70%{
+				top: 0;
+				left: 0;
+			}
+			0%,100%{
+				top: 0;
+				left: 800px;
+			}
+			40%{
+				top: 300px;
+				left: 800px;
+			}
+			50%{
+				top: 300px;
+				left: 0px;
+			}
+		}
+		@keyframes box3{
+			50%{
+				top: 0;
+				left: 0;
+			}
+			70%{
+				top: 0;
+				left: 800px;
+			}
+			0%,100%{
+				top: 300px;
+				left: 800px;
+			}
+			40%{
+				top: 300px;
+				left: 0px;
+			}
+		}
+		@keyframes box4{
+			40%{
+				top: 0;
+				left: 0;
+			}
+			50%{
+				top: 0;
+				left: 800px;
+			}
+			70%{
+				top: 300px;
+				left: 800px;
+			}
+			0%,100%{
+				top: 300px;
+				left: 0px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="child">1</div>
+		<div class="child">2</div>
+		<div class="child">3</div>
+		<div class="child">4</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		.box{
+			width: 250px;
+			height: 250px;
+			border:2px red solid;
+			float: left;
+			margin: 5px;
+			text-align: center;
+			font-size: 40px;
+		}
+		/* nth-child */
+		.main{
+			position: relative;
+			margin: auto;
+			border:2px green solid;
+			width: 1200px;
+			height: 700px;
+		}
+		.box:nth-child(2){
+			border-color: black;
+			position: absolute;
+			top:0px;
+			left:50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<div class="box">
+			<h1>1</h1>
+		</div>
+		<div class="box">
+			<h1>2</h1>
+		</div>
+		<div class="box">
+			<h1>3</h1>
+		</div>
+		<div class="box">
+			<h1>4</h1>
+		</div>
+	</div>
+</body>
+</html>

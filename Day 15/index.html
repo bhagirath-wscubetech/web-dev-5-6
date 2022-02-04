@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.main{
+			width: 1000px;
+			border:2px black solid;
+			height: 600px;
+			margin: auto;
+			padding: 10px;
+			font-size: 30px;
+			font-family: verdana;
+		}
+		.row{
+			margin-top: 10px;
+		}
+		.label-box{
+			width:200px;
+			float: left;
+		}
+		.row *{
+			font-size: 30px;
+		}
+		.list{
+			list-style-image: url(image/dot.jpg); 
+		}
+	</style>
+</head>
+<body>
+	
+		<ul class="list">
+			<li>
+				a
+			</li>
+			<li>
+				b
+			</li>
+			<li>
+				c
+			</li>
+			<li>
+				d
+			</li>
+			<li>
+				e
+			</li>
+		</ul>
+	
+	<div class="main">
+		<form>
+			<div class="row">
+				<div class="label-box">
+					<label>Name:</label>
+				</div>
+				<input type="text" name="user_name" value="" placeholder="Enter your name" />
+			</div>
+			<div class="row">
+				<div class="label-box">
+					<label>Address:</label>
+				</div>
+				<textarea placeholder="Enter your address" name="user_address"></textarea>
+			</div>
+			<div class="row">
+				<div class="label-box">
+					<label>Gender:</label>
+				</div>
+				<label for="male">Male:</label>
+				<input type="radio" checked  name="user_gender" value="M" id="male" />
+				<label for="female">Female:</label>
+				<input type="radio" name="user_gender" value="F" id="female" />
+			</div>
+			<div class="row">
+				<div class="label-box">
+					<label>Country:</label>
+				</div>
+				<select name="country">
+					<option>Select a country</option>
+					<optgroup label="Asia">
+						<option value="+91" selected>India</option>	
+						<option value="+93">China</option>
+						<option value="+97">Sri Lanka</option>
+					</optgroup>
+					<optgroup label="Other">
+						<option value="+01">America</option>
+						<option value="+99">Canada</option>
+					</optgroup>
+				</select>
+			</div>
+			<div class="row">
+				<div class="label-box">
+					<label>Resume: </label>
+				</div>
+				<input type="file" name="resume"/>
+			</div>
+			<div class="row">
+				<div class="label-box">
+					<label>Hobbies</label>
+				</div>
+				<label for="d">Dancing:</label>
+				<input type="checkbox" checked name="user_hobby" value="d" id="d" />
+				<label for="s">Singing:</label>
+				<input type="checkbox" checked name="user_hobby" value="s" id="s" />
+				<label for="g">Gamming:</label>
+				<input type="checkbox" name="user_hobby" value="g" id="g" />
+			</div>
+			<div class="row">
+				<input type="submit" name="" value="Send" />
+				<input type="reset" name=""/>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

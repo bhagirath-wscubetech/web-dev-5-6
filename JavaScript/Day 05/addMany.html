@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function add(...numbers){
+			var res = 0;
+			for(num of numbers){
+				res+=num
+				//res = res + num;
+			}
+			return res;
+		}
+		var x = add(3,1);
+		document.write(`<h1> ${x} </h1>`)
+		var z = add(3,9,6);
+		document.write(`<h1> ${z} </h1>`)
+		var y = add(3,9,6,3,9,6,3,9,6,3,9,6);
+		document.write(`<h1> ${y} </h1>`)	
+	</script>
+</body>
+</html>

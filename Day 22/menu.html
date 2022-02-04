@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		*{
+			font-family: verdana;
+			padding: 0;
+			margin: 0;
+		}
+		a{
+			color: inherit;
+			text-decoration: none;
+		}
+		#menu{
+			color: white;
+			width: 1000px;
+			margin: auto;
+			background:#34495e;
+		}
+		#menu > li{
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 20px;
+			position: relative;
+		}
+		#menu > li:hover .child{
+			top: 100%;
+			opacity: 1;
+			visibility: visible;
+		}
+		.child{
+			min-width: 100%;
+			position: absolute;
+			top: 200%;
+			left: 0px;
+			transition: 1s;
+			opacity: 0;
+			visibility: hidden;	
+			list-style: none;
+			background: #3498db;
+			padding: 0px;
+		}
+		.child > li{
+			position: relative;
+			border-top: 1px white solid;
+			padding: 5px;
+		}
+		.grandchild{
+			list-style: none;
+			position: absolute;
+			left: 200%;
+			top: 0;
+			opacity: 0;
+			transition: 1s;
+			visibility: hidden;
+			background: #3498db;
+		}
+		.grandchild > li{
+			border-top: 1px white solid;
+			padding: 5px;
+		}
+		.child > li:hover .grandchild{
+			left: 100%;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+	<ul id="menu">
+		<li>
+			<a href="">Home</a>
+		</li>
+		<li>
+			<a href="">About</a>
+		</li>
+		<li>
+			<a href="">Courses</a>
+			<ul class="child">
+				<li>
+					<a href="">Web development</a>
+					<ul class="grandchild">
+						<li>
+							<a href="">HTML</a>
+						</li>
+						<li>
+							<a href="">CSS</a>
+						</li>
+						<li>
+							<a href="">JavaScript</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">App development</a>
+					<ul class="grandchild">
+						<li>
+							<a href="">Android</a>
+						</li>
+						<li>
+							<a href="">Swift</a>
+						</li>
+						<li>
+							<a href="">Flutter</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Hacking</a>
+				</li>
+				<li>
+					<a href="">Digital Marketing</a>
+					<ul class="grandchild">
+						<li>
+							<a href="">SEO</a>
+						</li>
+						<li>
+							<a href="">SMO</a>
+						</li>
+						<li>
+							<a href="">Ads</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">Contact Us</a>
+			<ul class="child">
+				<li>
+					<a href="">Email</a>
+					<ul class="grandchild">
+						<li>
+							<a href="">123456789</a>
+						</li>
+						<li>
+							<a href="">09865432</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">Whatsapp</a>
+					<ul class="grandchild">
+						<li>
+							<a href="">123456789</a>
+						</li>
+						<li>
+							<a href="">09865432</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="">Enquiry</a>
+		</li>
+	</ul>
+</body>
+</html>
