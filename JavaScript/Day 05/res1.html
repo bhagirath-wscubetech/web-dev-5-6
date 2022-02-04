@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var marks = []
+
+		function getMarks() {
+			var num = prompt("Please enter marks")
+			if(num === null){
+				console.log(marks)
+			}else{
+				marks.push(num);
+				getMarks();	
+			}
+		}
+		
+		getMarks();
+
+
+
+
+
+
+
+
+
+		// 1 to 10
+		// for(var i=1;i<=10;i++){
+		// 	console.log(i);
+		// }
+		// var x = prompt("First");
+		// var y = prompt("Second");
+		// function printSeq(num,limit){
+		// 	console.log(num);
+		// 	num++;
+		// 	if(num<=limit){
+		// 		return printSeq(num,limit)
+		// 	}
+		// 	return;
+		// }
+		
+		// printSeq(x,y);
+	</script>
+</body>
+</html>

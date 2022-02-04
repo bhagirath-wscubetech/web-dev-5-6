@@ -10,7 +10,8 @@
 		var marks = [
 			{
 				sub:"Math",
-				num: 50 
+				num: 50,
+
 			},
 			{
 				sub:"Science",
@@ -21,13 +22,18 @@
 				num: 38
 			}
 		]
-		console.log(marks)
-		var number = [];
-		for(data of marks){
-			number.push(data.num)
+
+		function printNum(num){
+			console.log(num)
 		}
-		console.log(number);
-		console.log(Math.max(...number));
+		// console.log(marks)
+		// var number = [];
+		for(data of marks){
+			// number.push(data.num)
+			printNum(data.num);
+		}
+		// console.log(number);
+		// console.log(Math.max(...number));
 	</script>
 </body>
 </html>
