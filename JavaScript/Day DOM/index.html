@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.box{
+			width: 400px;
+			height: 400px;
+			border: 2px red solid;
+			margin: 10px;
+			float: left;
+			text-align: center;
+			padding-top: 40px;
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<button onclick="addData()">Add</button>
+	</div>
+	<div class="box" id="box1">2</div>
+	<div class="box" id="box2">
+		<h1>1</h1>
+	</div>
+	<div class="box">3</div>
+	<script type="text/javascript">
+		
+		var boxElem = document.getElementById('box2')
+		// console.log(box.innerText); //get
+		// console.log(box.innerHTML); //get
+		function addData() {
+			var data = prompt("Please enter data");
+			boxElem.innerHTML = `<h1> ${data} </h1>`;
+		}
+
+		/**
+		 * set html -> box.innerHTML = "<h1> Data here </h1>"
+		 * set text -> box.innerText = "Data here"
+		*/
+		var boxes = document.getElementsByClassName('box');
+		console.log(boxes);
+	</script>
+</body>
+</html>
