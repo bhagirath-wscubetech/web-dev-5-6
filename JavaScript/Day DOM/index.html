@@ -5,43 +5,35 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<style type="text/css">
-		.box{
-			width: 400px;
-			height: 400px;
+		.demo{
+			width: 300px;
+			height: 300px;
 			border: 2px red solid;
-			margin: 10px;
 			float: left;
-			text-align: center;
-			padding-top: 40px;
-			box-sizing: border-box;
 		}
 	</style>
 </head>
 <body>
-	<div>
-		<button onclick="addData()">Add</button>
+	<button onclick="greet()">Click</button>
+	<div class="demo" id="first">
+		<h1>Hello There!!! 1</h1>
 	</div>
-	<div class="box" id="box1">2</div>
-	<div class="box" id="box2">
-		<h1>1</h1>
+	<!-- <div class="demo">
+		<h1>Hello There!!! 2</h1>
 	</div>
-	<div class="box">3</div>
+	<div class="demo">
+		<h1>Hello There!!! 3</h1>
+	</div>
+	<div class="demo">
+		<h1>Hello There!!! 4</h1>
+	</div> -->
 	<script type="text/javascript">
-		
-		var boxElem = document.getElementById('box2')
-		// console.log(box.innerText); //get
-		// console.log(box.innerHTML); //get
-		function addData() {
-			var data = prompt("Please enter data");
-			boxElem.innerHTML = `<h1> ${data} </h1>`;
-		}
-
-		/**
-		 * set html -> box.innerHTML = "<h1> Data here </h1>"
-		 * set text -> box.innerText = "Data here"
-		*/
-		var boxes = document.getElementsByClassName('box');
+		var boxes = document.getElementsByClassName('demo');
 		console.log(boxes);
+		function greet() {
+			var name = prompt("Please enter your name");
+			boxes[0].innerHTML = `<h1> ${name} <h1>`;
+		}
 	</script>
 </body>
 </html>
