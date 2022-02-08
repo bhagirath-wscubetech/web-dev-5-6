@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.box{
+			width: 700px;
+			margin:auto;
+			border:2px black solid;
+		}
+		.child{
+			width: 200px;
+			height: 150px;
+			float: left;
+			margin:10px;
+			font-family: verdana;
+			padding-top: 20px;
+			box-sizing: border-box;
+			/*font-size: 40px;
+			font-weight: bold;*/
+			font:40px bold;
+			text-align: center;
+			box-shadow: 0px 0px 5px grey;
+		}
+		.clear{
+			clear: both;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			1
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			2
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			3
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			4
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			5
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			6
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			7
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			8
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			9
+		</div>
+		<div class="child" 
+			onclick="sendData(this)" onmouseenter="changeColor(this,1)" onmouseleave="changeColor(this,0)">
+			0
+		</div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">
+		// var children = document.getElementsByClassName('child')
+		function changeColor(elem,flag) {
+			if (flag == 1)
+				elem.style.background = "lightgrey";
+			else 
+				elem.style.background = "";
+		}
+		function sendData(elem){
+			console.log(elem.innerText)
+		}
+	</script>
+</body>
+</html>

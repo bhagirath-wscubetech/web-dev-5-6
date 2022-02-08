@@ -1,0 +1,18 @@
+- What is DOM?
+- Function  
+	document.write()
+	document.getElementById()
+	document.getElementsByClassName()
+	document.getElementsByTagName()
+- Prop 
+	innerText
+	innerHTML
+	value (input)
+	style
+- Event 
+	onclick -> left click
+	onmouseenter
+	onmouseleave
+
+font-size -> fontSize
+color -> color

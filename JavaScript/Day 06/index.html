@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<style type="text/css">
+		.box{
+			width: 300px;
+			height: 300px;
+			border:2px red solid;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+		<button onclick="changeColor(1)">Add Color</button>
+		<button  onclick="changeColor(0)">Remove Color</button>
+		<div class="box">	</div>
+		<script type="text/javascript">
+			var boxes = document.getElementsByClassName('box')
+			// function addColor() {
+			// 	// console.log(boxes[0].style)
+			// 	boxes[0].style.backgroundColor = "blue"
+			// }
+			// function removeColor() {
+			// 	boxes[0].style.backgroundColor = ""	
+			// }
+			function changeColor(flag) {
+				if(flag == 1){
+					boxes[0].style.backgroundColor = "blue"
+					boxes[0].style.width = "200px"
+				}else{
+					boxes[0].style.backgroundColor = ""
+					boxes[0].style.width = ""
+				}
+			}
+		</script>		
+</body>
+</html>
