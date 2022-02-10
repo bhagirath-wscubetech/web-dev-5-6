@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			font-size: 40px;
+		}
+		.box{
+			width: 500px;
+			height: 40px;
+			margin-top: 10px;
+			position: relative;
+		}
+		#alertBox{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		#meter{
+			width: 0%;
+			height: 40px;
+			transition: 1s;
+			background:red; 
+		}
+	</style>
+</head>
+<body>
+	<input type="text" name="" onkeyup="demo(this.value)" />
+	<div class="box">
+		<div id="alertBox"></div>
+		<div id="meter">
+			
+		</div>
+	</div>
+	<script type="text/javascript">
+		var meter = document.getElementById('meter')
+		var meterStyle = meter.style;
+		function demo(data) {
+			console.log(data.length)
+			if(data.length > 0 && data.length <=5){
+				// weak password
+				meterStyle.width = "30%";
+				meterStyle.background = "red";
+				alertBox.innerText = "Weak Password"
+			}else if(data.length <=10 && data.length > 5){
+				// medium password
+				meterStyle.width = "70%";
+				meterStyle.background = "orange";
+				alertBox.innerText = "Medium Password"
+			}else if(data.length > 10){
+				// strong password
+				meterStyle.width = "100%";
+				meterStyle.background = "green";
+				alertBox.innerText = "Strong Password"
+			}else{
+				meterStyle.width = "0%"
+				alert.innerText = ""
+			}
+		}
+	</script>
+</body>
+</html>
