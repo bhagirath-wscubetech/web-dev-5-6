@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button onclick="loginUser()">Login</button>
+	<h2 id="res"></h2>
+	<script type="text/javascript">
+		var timer = 6;
+		var intervalHolder;
+		function loginUser() {
+			res.innerText = `Login successfully, redirecting in ${timer} secs`;
+			intervalHolder = setInterval(
+				function() {
+					if(timer == 0){
+						clearInterval(intervalHolder);
+						return;
+					}
+					timer--;
+					res.innerText = `Login successfully, redirecting in ${timer} secs`;
+				},
+				1000
+			)
+
+			setTimeout(
+				function() {
+					window.location.href = "https://wscubetech.com"
+				},
+				(timer-1)*1000
+			)
+		}
+	</script>
+</body>
+</html>

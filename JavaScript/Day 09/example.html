@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.demo{
+			width: 500px;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<h1 id="res">10</h1>
+		<button onclick="startCount()">Start</button>
+		<button onclick="stopCount(0)">Pause</button>
+		<button onclick="stopCount(1)">Stop</button>
+	</div>
+	<script type="text/javascript">
+		var i = 9;
+		var intervalHandler;
+		function startCount() {
+			intervalHandler = setInterval(
+				function() {
+					if(i==0){
+						stopCount();
+						return;
+					}
+					res.innerText = i;
+					i--;
+				},
+				1000
+			)
+		}
+
+		function stopCount(flag) {
+			if(flag == 1){
+				i = 10;
+				//reset
+			}
+			clearInterval(intervalHandler)
+		}
+	</script>
+</body>
+</html>
