@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.test{
+			font-size: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="test">1</div>
+	<div class="test">2</div>
+	<div class="test">3</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">	
+		var testBoxes = $(".test");
+		console.log(testBoxes);
+		// var testBoxes = document.getElementsByClassName('test');
+		setTimeout(
+			function() {
+				testBoxes.fadeOut(6000)
+			},
+			5000
+		)
+	</script>
+</body>
+</html>
