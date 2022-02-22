@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function convertToYear(ms) {
+			return ms/1000/3600/24/365;
+		}
+		var today = new Date();
+		var dob = new Date("05-July-2001");
+		var ac = today.getTime();
+		var ab = dob.getTime();
+		var bc = ac - ab;
+		console.table(
+			[
+				{
+					title:"ac",
+					data: convertToYear(ac)
+				},
+				{
+					title:"ab",
+					data: convertToYear(ab)	
+				},
+				{
+					title:"bc",
+					data: convertToYear(bc)	
+				}
+			]
+		)
+	</script>
+</body>
+</html>
