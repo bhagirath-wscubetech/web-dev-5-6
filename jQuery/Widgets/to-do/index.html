@@ -1,0 +1,127 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+		<style type="text/css">
+			*{
+				font-family: verdana;
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 1000px;
+				min-height: 600px;
+				box-shadow: 0px 0px 5px grey; 
+				margin: 10px auto;
+			}
+			.input-group{
+				width: 1000px;
+				margin: auto;
+				padding: 10px;
+				box-shadow: 0px 0px 5px grey; 
+			}
+			.input-group input{
+				font-size: 20px;
+				width: 80%;
+			}
+			#list-box {
+				width: 90%;
+				margin: auto;
+				list-style: none;
+				padding-top: 10px;
+			}
+			.item{
+				padding: 10px;
+				margin-bottom: 5px;
+				color: white;
+				background: #3498db;	
+				position: relative;
+			}
+			.close{
+				position: absolute;
+				right: 10px;
+				cursor: pointer;
+				font-weight: bold;
+			}
+
+			.done{
+				background: #34495e !important;
+				text-decoration: line-through;
+			}
+			.danger{
+				background: #e74c3c !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="input-group">
+			<input type="" name="" id="item">
+			<button id="add">Add</button>
+		</div>
+		<div class="box">
+			<ul id="list-box">
+			</ul>
+		</div>
+		
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
+		<!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+		<script src="jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+
+	// $(".close").mouseenter(
+	// 	function() {
+	// 		$(this).parent("li").addClass("danger")	
+	// 	}
+	// )
+	// $(".close").mouseleave(
+	// 	function() {
+	// 		$(this).parent("li").removeClass("danger")	
+	// 	}
+	// )
+	$(document).ready(
+		function() {
+			$(".close").hover(
+				function() {
+					$(this).parent("li").toggleClass("danger");
+				}
+				)
+
+			$("#list-box .close").click(
+				function() {
+					// swal({
+					// 	title: "Are you sure?",
+					// 	text: "Once deleted, you will not be able to recover!",
+					// 	icon: "warning",
+					// 	buttons: true,
+					// 	dangerMode: true,
+					// })
+					// .then((willDelete) => {
+					// 	if (willDelete) {
+					// 		$(this).parent("li").remove();
+					// 	}
+					// });
+					$(this).parent("li").remove();
+				}
+				)
+			$("#add").click(
+				function() {
+					var item = $("#item").val();
+					$("#list-box").append(`
+						<li class="item">
+						${item}
+						<span class="close">X</span>
+						</li>
+					`);
+				}
+				)
+
+			$("#list-box .item").click(
+				function() {
+					$(this).toggleClass("done");
+				}
+				)
+		}
+		)
+	</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<title>Original jQuery Slideshow Plugin Examples</title>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/slider.css"/>
+	<link href="css/lightbox.min.css" rel="stylesheet" />
+	<link href="css/particle.css" rel="stylesheet" />
+</head>
+<body>
+	<!-- particles.js container -->
+	<div id="particles-js"></div>
+
+	<!-- stats - count particles -->
+	<div class="count-particles">
+		<span class="js-count-particles">--</span> particles
+	</div>
+
+	<!-- <div class="slideshow">
+
+		<div class="slides-box">
+			<div class="slide">
+		
+				<img src="https://picsum.photos/1280/720?random=1" alt="image" title="image" class="slider-img">
+			</div>
+
+			<div class="slide">
+		
+				<img src="https://picsum.photos/1280/720?random=2" alt="image" title="image" class="slider-img">
+			</div>
+
+			<div class="slide">
+		
+				<img src="https://picsum.photos/1280/720?random=3" alt="image" title="image" class="slider-img">
+			</div>
+
+			<div class="slide">
+		
+				<img src="https://picsum.photos/1280/720?random=4" alt="image" title="image" class="slider-img">
+			</div>
+
+			<div class="slide">
+		
+				<img src="https://picsum.photos/1280/720?random=5" alt="image" title="image" class="slider-img">
+			</div>
+
+		</div>
+
+		<div class="slideshow-buttons">
+
+			<div class="prev-btn">&larr;</div>
+			<div class="next-btn">&rarr;</div>
+
+		</div>
+
+	</div> -->
+	<a href="images/1.jpg" data-lightbox="roadtrip">
+		<img src="images/1.jpg" width="200" height="200">
+	</a>
+	<a href="images/2.jpg" data-lightbox="roadtrip">
+		<img src="images/2.jpg" width="200" height="200">
+	</a>
+	<a href="images/3.jpg" data-lightbox="roadtrip">
+		<img src="images/3.jpg" width="200" height="200">
+	</a>
+
+	<!-- https://picsum.photos/1280/720?random=5" -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+	<script src="https://threejs.org/examples/js/libs/stats.min.js" type="text/javascript"></script>
+	<script src="js/slideshow.js"></script>
+	<script src="js/particle.js"></script>
+	<script src="js/lightbox.min.js" type="text/javascript"></script>
+	<script>
+
+		$(document).ready(function () {
+
+			$('.slideshow').slideshowPlugin({
+        // Parameters
+        autoplay: 'true',
+        effect: 'sliding',
+        slideSpeed: 800,
+        ratio: "keep",
+    });
+
+      // $('.slideshow-2').slideshowPlugin({
+      //   effect: 'fade',
+      //   ratio: "keep",
+      // });
+
+      // $('.slideshow-3').slideshowPlugin({
+      //   effect: 'photo',
+      //   ratio: "keep",
+      // });
+
+      // $('.slideshow-4').slideshowPlugin({
+      //   effect: 'sliding',
+      //   autoplay: 'true',
+      //   delay: 8000,
+      //   slideSpeed: 700,
+      //   ratio: "keep",
+      // });
+
+      // Typing Text
+      var content = $('.copy-title').text();
+
+      var ele = '<span>' + content.split('').join('</span><span>') + '</span>';
+
+      $(ele).hide().appendTo('.main-title').each(function (i) {
+      	$(this).delay(100 * i).css({
+      		display: 'inline',
+      		opacity: 0
+      	}).animate({
+      		opacity: 1
+      	}, 100);
+      });
+      // End Typing text
+
+  });
+</script>
+
+</body>
+</html>
