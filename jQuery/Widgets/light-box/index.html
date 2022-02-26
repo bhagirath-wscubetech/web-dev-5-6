@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.main{
+			width: 1000px;
+			height: 300px;
+			margin: auto;
+			text-align: center;
+		}	
+		.main img{
+			width: 200px;
+			height: 200px;
+		}
+		.overlay{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			transform: scale(0,0);
+			transition: 0.5s;
+			background-color: rgba(0,0,0,0.7);
+		}
+		#close{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			cursor: pointer;
+		}
+		.show-overlay{
+			transform: scale(1,1);
+		}
+	</style>
+</head>
+<body>
+	<div class="overlay">
+		<div id="close">
+			<img src="images/close.png"/>
+		</div>
+		<img src="" width="70%" height="70%">
+	</div>
+	<div class="main">
+		<img src="images/1.jpg"/>
+		<img src="images/2.jpg"/>
+		<img src="images/3.jpg"/>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$(".main img").click(
+			function() {
+				var source = $(this).attr("src");
+				$(".overlay").children("img").attr("src",source)
+				$(".overlay").addClass("show-overlay")
+			}
+		);	
+		$(document).keyup(
+			function(event) {
+				if(event.key == "Escape"){
+					$(".overlay").removeClass("show-overlay")					
+				}
+			}
+		)
+		$("#close").click(
+			function() {
+				$(".overlay").removeClass("show-overlay")					
+			}
+		);
+	</script>
+</body>
+</html>

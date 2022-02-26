@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="password" name="" id="pass-box" />
+	<button id="toggle-btn" data-password="1">Show Password</button>
+	<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var a;
+		$("#toggle-btn").click(
+			function() {
+				// 1: then show password
+				// 0: Hide password
+				if($(this).data('password') == 1){ //get
+					$("#pass-box").attr("type","text")
+					$(this).text("Hide Password")
+					$(this).data('password',0) //set
+				}else{
+					$("#pass-box").attr("type","password")
+					$(this).text("Show Password")
+					$(this).data('password',1) //set
+				}
+				
+			}
+		)
+	</script>
+</body>
+</html>
