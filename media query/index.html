@@ -6,7 +6,33 @@
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
+
 <body>
+
+	<i class="fa-solid fa-bars" id="bar"></i>
+	<!-- <i class="fa-solid fa-xmark"></i> -->
+	<nav>
+		<ul>
+			<li>
+				<a href="">Home</a>
+			</li>
+			<li>
+				<a href="">About Us</a>
+			</li>
+			<li>
+				<a href="">Courses</a>
+			</li>
+			<li>
+				<a href="">Gallery</a>
+			</li>
+			<li>
+				<a href="">Contact Us</a>
+			</li>
+			<li>
+				<a href="">Enquiry</a>
+			</li>
+		</ul>
+	</nav>
 	<div class="main">
 		<div class="col">
 			<img src="https://picsum.photos/300/500?random=1"/>
@@ -24,5 +50,23 @@
 			
 		</div>
 	</div>
-</body>
-</html>
+	<script src="https://kit.fontawesome.com/92c852e4ce.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"> </script>
+	<script type="text/javascript">
+		$("#bar").click(
+			function() {
+				$("nav").toggleClass("show-nav")
+				$(this).toggleClass("fa-bars").toggleClass("fa-xmark")
+			}
+		)
+		$(document).keyup(
+			function(event) {
+				if(event.key == "Escape"){
+					$("nav").removeClass("show-nav")
+					$("#bar").addClass("fa-bars").removeClass("fa-xmark")				
+				}
+			}
+		)
+		</script>
+	</body>
+	</html>
