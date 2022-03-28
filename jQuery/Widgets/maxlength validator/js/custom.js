@@ -4,7 +4,7 @@ $(document).ready(
 	
 		textarea.keyup(
 			function() {
-				var maxLeng = $(this).attr("maxlength");
+				var maxLeng = $(this).data("length");
 				var textLeng = $(this).val().length;
 				var remainLeng = maxLeng - textLeng;
 				$(this).prev(".msg").text(`Only ${remainLeng} characters are left`);
